@@ -62,20 +62,20 @@ GPU 服务器、HPC 集群、机器人工作站、嵌入式设备、专有 SDK �
 
 ### Codex
 
-用户级安装可以把仓库克隆到 Codex 用户 Skill 目录。请将 `<REPOSITORY_URL>` 替换为发布后的真实仓库地址。
+用户级安装可以把[本仓库](https://github.com/Mingyang-Sheep/local-first-server-dev)克隆到 Codex 用户 Skill 目录。
 
 PowerShell：
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
-git clone <REPOSITORY_URL> "$HOME\.agents\skills\local-first-server-dev"
+git clone https://github.com/Mingyang-Sheep/local-first-server-dev.git "$HOME\.agents\skills\local-first-server-dev"
 ```
 
 POSIX shell：
 
 ```bash
 mkdir -p "$HOME/.agents/skills"
-git clone <REPOSITORY_URL> "$HOME/.agents/skills/local-first-server-dev"
+git clone https://github.com/Mingyang-Sheep/local-first-server-dev.git "$HOME/.agents/skills/local-first-server-dev"
 ```
 
 仓库级安装则将 Skill 文件夹放在目标仓库的 `.agents/skills/` 下。Codex 支持通过 `$local-first-server-dev` 显式调用，也可能根据 description 自动选择。当前路径和调用规则以 [OpenAI 官方 Skill 文档](https://developers.openai.com/codex/skills)为准。

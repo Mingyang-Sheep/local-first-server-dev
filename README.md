@@ -64,20 +64,20 @@ The canonical artifact is the repository's [`SKILL.md`](SKILL.md). The skill fol
 
 ### Codex
 
-For a user-scoped Codex installation, clone the repository into the user skills directory. Replace `<REPOSITORY_URL>` with the published repository URL.
+For a user-scoped Codex installation, clone [this repository](https://github.com/Mingyang-Sheep/local-first-server-dev) into the user skills directory.
 
 PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
-git clone <REPOSITORY_URL> "$HOME\.agents\skills\local-first-server-dev"
+git clone https://github.com/Mingyang-Sheep/local-first-server-dev.git "$HOME\.agents\skills\local-first-server-dev"
 ```
 
 POSIX shell:
 
 ```bash
 mkdir -p "$HOME/.agents/skills"
-git clone <REPOSITORY_URL> "$HOME/.agents/skills/local-first-server-dev"
+git clone https://github.com/Mingyang-Sheep/local-first-server-dev.git "$HOME/.agents/skills/local-first-server-dev"
 ```
 
 For a repository-scoped installation, place the skill folder below `.agents/skills/` in the relevant repository. Codex supports explicit invocation with `$local-first-server-dev` and may also select the skill implicitly from its description. See the [official OpenAI skill documentation](https://developers.openai.com/codex/skills) for current locations and invocation behavior.
